@@ -56,4 +56,7 @@ print('Logistic regression and s curve completed. Onward!')
 #Taking user input and acting on it
 input = float(input("Enter a velocity(how fast the gerbil runs), and then I will tell you if it escapes it's cage or not."))
 change= model(input*lr.coef_+lr.intercept_).ravel()
-print(change)
+if(change>0.6):
+  print("Your annoying gerbil will escape and traumatize the population.")
+else:
+  print("Your gerbil will stay in it's cage.")
